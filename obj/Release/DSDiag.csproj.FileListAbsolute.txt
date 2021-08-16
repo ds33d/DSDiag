@@ -1,0 +1,9 @@
+D:\Data\Github\DSDiag\Files\DSDiag\bin\Release\DSDiag.exe.config
+D:\Data\Github\DSDiag\Files\DSDiag\bin\Release\DSDiag.exe
+D:\Data\Github\DSDiag\Files\DSDiag\bin\Release\DSDiag.pdb
+D:\Data\Github\DSDiag\Files\DSDiag\obj\Release\DSDiag.Form1.resources
+D:\Data\Github\DSDiag\Files\DSDiag\obj\Release\DSDiag.Properties.Resources.resources
+D:\Data\Github\DSDiag\Files\DSDiag\obj\Release\DSDiag.csproj.GenerateResource.cache
+D:\Data\Github\DSDiag\Files\DSDiag\obj\Release\DSDiag.csproj.CoreCompileInputs.cache
+D:\Data\Github\DSDiag\Files\DSDiag\obj\Release\DSDiag.exe
+D:\Data\Github\DSDiag\Files\DSDiag\obj\Release\DSDiag.pdb

@@ -15,6 +15,9 @@ namespace DSDiag
     {
         public Form1()
         {
+
+            this.MinimumSize = new Size(545, 296);
+            this.MaximumSize = new Size(545, 296);
             InitializeComponent();
         }
 
@@ -31,10 +34,13 @@ namespace DSDiag
         private void Form1_Load(object sender, EventArgs e)
 
         {
-            
+
+
 
             ManagementObjectSearcher myVideoObject = new ManagementObjectSearcher("select * from Win32_VideoController");
             ManagementObjectSearcher myProcessorObject = new ManagementObjectSearcher("select * from Win32_Processor");
+            ManagementObjectSearcher myMemoryObject = new ManagementObjectSearcher("select * from Win32_PhysicalMemory");
+           
 
             foreach (ManagementObject videoObj in myVideoObject.Get())
             {
@@ -45,10 +51,24 @@ namespace DSDiag
             }
             foreach (ManagementObject item in myProcessorObject.Get())
             {
-                Console.WriteLine(item.ToString());
-                var x = item.ToString();
-                Console.WriteLine(item[x].ToString());
-                
+                lblProccessor.Text = item["Name"].ToString();
+                lblSysName.Text = item["SystemName"].ToString();
+
+
+            }
+            var num = 0;
+            foreach (ManagementObject item in myMemoryObject.Get())
+            {
+                num++;
+                var x = item["Capacity"].ToString();
+                var y = Convert.ToDouble(x) / 1000000;
+                y = Convert.ToInt32(y);
+
+                y = y * num;
+                Console.WriteLine(y);
+                lblPhysMemory.Text = "RAM: " + y.ToString() + "MB";
+
+
             }
         }
     }

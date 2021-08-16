@@ -42,7 +42,10 @@ namespace DSDiag
             this.lblDrivers = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblProccessor = new System.Windows.Forms.Label();
+            this.lblSysName = new System.Windows.Forms.Label();
+            this.lblPhysMemory = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +62,7 @@ namespace DSDiag
             this.toolsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(447, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(529, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,9 +88,12 @@ namespace DSDiag
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.lblPhysMemory);
+            this.groupBox1.Controls.Add(this.lblSysName);
             this.groupBox1.Location = new System.Drawing.Point(13, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(280, 100);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Basic";
@@ -97,14 +103,14 @@ namespace DSDiag
             this.groupBox2.Controls.Add(this.lblProccessor);
             this.groupBox2.Location = new System.Drawing.Point(13, 135);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.Size = new System.Drawing.Size(280, 100);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Processor";
             // 
             // groupBox3
             // 
-            this.groupBox3.Location = new System.Drawing.Point(220, 28);
+            this.groupBox3.Location = new System.Drawing.Point(314, 28);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 100);
             this.groupBox3.TabIndex = 4;
@@ -115,7 +121,7 @@ namespace DSDiag
             // 
             this.groupBox4.Controls.Add(this.lblDrivers);
             this.groupBox4.Controls.Add(this.lblName);
-            this.groupBox4.Location = new System.Drawing.Point(220, 135);
+            this.groupBox4.Location = new System.Drawing.Point(314, 135);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 100);
             this.groupBox4.TabIndex = 5;
@@ -124,7 +130,8 @@ namespace DSDiag
             // 
             // lblDrivers
             // 
-            this.lblDrivers.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDrivers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDrivers.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDrivers.Location = new System.Drawing.Point(7, 43);
             this.lblDrivers.Name = "lblDrivers";
             this.lblDrivers.Size = new System.Drawing.Size(187, 23);
@@ -134,7 +141,8 @@ namespace DSDiag
             // 
             // lblName
             // 
-            this.lblName.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblName.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(7, 20);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(187, 23);
@@ -144,30 +152,55 @@ namespace DSDiag
             // 
             // lblProccessor
             // 
-            this.lblProccessor.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProccessor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblProccessor.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProccessor.Location = new System.Drawing.Point(7, 16);
             this.lblProccessor.Name = "lblProccessor";
-            this.lblProccessor.Size = new System.Drawing.Size(187, 23);
+            this.lblProccessor.Size = new System.Drawing.Size(266, 23);
             this.lblProccessor.TabIndex = 2;
             this.lblProccessor.Text = "label1";
             this.lblProccessor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSysName
+            // 
+            this.lblSysName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSysName.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSysName.Location = new System.Drawing.Point(7, 16);
+            this.lblSysName.Name = "lblSysName";
+            this.lblSysName.Size = new System.Drawing.Size(266, 23);
+            this.lblSysName.TabIndex = 3;
+            this.lblSysName.Text = "label1";
+            this.lblSysName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPhysMemory
+            // 
+            this.lblPhysMemory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPhysMemory.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhysMemory.Location = new System.Drawing.Point(7, 39);
+            this.lblPhysMemory.Name = "lblPhysMemory";
+            this.lblPhysMemory.Size = new System.Drawing.Size(266, 23);
+            this.lblPhysMemory.TabIndex = 4;
+            this.lblPhysMemory.Text = "label1";
+            this.lblPhysMemory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 257);
+            this.ClientSize = new System.Drawing.Size(529, 257);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "DSDiag";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -189,6 +222,8 @@ namespace DSDiag
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblDrivers;
         private System.Windows.Forms.Label lblProccessor;
+        private System.Windows.Forms.Label lblSysName;
+        private System.Windows.Forms.Label lblPhysMemory;
     }
 }
 
